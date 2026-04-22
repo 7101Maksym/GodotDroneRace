@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://kscsqa0klhyp"]
+
+[ext_resource type="Texture2D" uid="uid://d0121xfvjqw32" path="res://Images/UI/WorkshopBackground.png" id="1_qud1w"]
+[ext_resource type="Script" uid="uid://dkv43crdq8yh4" path="res://Scripts/UI/MainUI.gd" id="1_t1sx5"]
+[ext_resource type="Texture2D" uid="uid://borwagidxx04" path="res://Images/UI/Panel.png" id="2_4qtac"]
+[ext_resource type="PackedScene" uid="uid://bqa0hdwrlskla" path="res://Scenes/UI/DronesTemplates/1.tscn" id="3_4qtac"]
+[ext_resource type="PackedScene" uid="uid://riy1nek10n31" path="res://Scenes/UI/gun_setter.tscn" id="4_hkwcb"]
+[ext_resource type="Texture2D" uid="uid://co3m2qhu0kela" path="res://Images/UI/OptionButton.png" id="4_q0joe"]
+[ext_resource type="Texture2D" uid="uid://kh47f15wsst3" path="res://Images/UI/OptionButtonPressed.png" id="5_hega2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkwcb"]
+texture = ExtResource("2_4qtac")
+texture_margin_left = 50.0
+texture_margin_top = 50.0
+texture_margin_right = 50.0
+texture_margin_bottom = 50.0
+modulate_color = Color(1, 1, 1, 0.80784315)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1bmn"]
+texture = ExtResource("4_q0joe")
+texture_margin_left = 43.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqgk8"]
+texture = ExtResource("5_hega2")
+texture_margin_left = 43.0
+
+[node name="MainUI" type="Control" unique_id=1384379165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t1sx5")
+
+[node name="SetDroneMenu" type="CanvasLayer" parent="." unique_id=608803413]
+
+[node name="TextureRect" type="TextureRect" parent="SetDroneMenu" unique_id=2076408765]
+modulate = Color(0.4725, 0.4725, 0.4725, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qud1w")
+stretch_mode = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SetDroneMenu" unique_id=1247052217]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.397
+anchor_right = 0.5
+anchor_bottom = 0.688
+offset_top = 0.23999023
+offset_bottom = -0.2000122
+theme_override_constants/separation = 863
+
+[node name="Panel" type="Panel" parent="SetDroneMenu" unique_id=2118001232]
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.076000005
+anchor_right = 0.20300001
+anchor_bottom = 0.734
+offset_left = -0.16000366
+offset_top = -0.08000183
+offset_right = -0.76000977
+offset_bottom = 0.27996826
+theme_override_styles/panel = SubResource("StyleBoxTexture_hkwcb")
+
+[node name="ConfirmButton" type="Button" parent="SetDroneMenu" unique_id=614748264]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+anchors_preset = -1
+anchor_left = 0.83100003
+anchor_top = 0.81600004
+anchor_right = 1.0
+anchor_bottom = 0.934
+offset_left = 0.19995117
+offset_top = 0.5999756
+offset_bottom = 0.39996338
+theme_override_colors/font_color = Color(1.5720325, 1.5720325, 1.5720325, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_x1bmn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sqgk8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x1bmn")
+text = "Confirm"
+
+[node name="ChangeVeapons" type="Button" parent="SetDroneMenu" unique_id=1800037304]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+anchors_preset = -1
+anchor_left = 0.83100003
+anchor_top = 0.652
+anchor_right = 1.0
+anchor_bottom = 0.77000004
+offset_left = 0.19995117
+offset_top = 0.2000122
+offset_bottom = -6.1035156e-05
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_x1bmn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sqgk8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x1bmn")
+text = "Change veapons"
+
+[node name="SetVeaponsMenu" type="CanvasLayer" parent="." unique_id=188268209]
+layer = 2
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="SetVeaponsMenu" unique_id=1569379571]
+modulate = Color(0.4725, 0.4725, 0.4725, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qud1w")
+stretch_mode = 6
+
+[node name="Drone" type="Control" parent="SetVeaponsMenu" unique_id=1099989497]
+layout_mode = 3
+anchor_left = 0.342
+anchor_top = 0.41200003
+anchor_right = 0.683
+anchor_bottom = 0.75600004
+offset_left = 0.39996338
+offset_top = 0.19998169
+offset_right = -0.4000244
+offset_bottom = -0.4000244
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" parent="SetVeaponsMenu/Drone" unique_id=1321517630 instance=ExtResource("3_4qtac")]
+layout_mode = 1
+
+[node name="GunSetters" type="Control" parent="SetVeaponsMenu" unique_id=135418716]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GunSetter2" parent="SetVeaponsMenu/GunSetters" unique_id=1252862436 instance=ExtResource("4_hkwcb")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.78800005
+anchor_right = 0.32700002
+anchor_bottom = 1.0
+offset_left = 589.0
+offset_top = -0.2000122
+offset_right = 0.39996338
+offset_bottom = -191.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerInventory" type="CanvasLayer" parent="." unique_id=878459874]
+layer = 10
+
+[connection signal="pressed" from="SetDroneMenu/ChangeVeapons" to="." method="SetChangeVeapons"]

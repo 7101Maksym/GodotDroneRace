@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://wg313gbjahx5"]
+
+[ext_resource type="Script" uid="uid://rrryo07oubi8" path="res://Scripts/UI/ButtonReloadIndicator.gd" id="1_y3uf2"]
+
+[node name="ShootButton" type="Button" unique_id=951712284]
+custom_minimum_size = Vector2(80, 80)
+size_flags_vertical = 0
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_y3uf2")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1062663492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+value = 100.0
+show_percentage = false

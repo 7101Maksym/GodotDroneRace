@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://cs6cxe6josut0"]
+
+[ext_resource type="Script" uid="uid://ct7n3jwbb6sod" path="res://Scripts/Player/Mover.gd" id="1_b1cu7"]
+[ext_resource type="Texture2D" uid="uid://whj17u3d6nks" path="res://Images/Player/Drones/Player drone 1.png" id="1_bkb83"]
+[ext_resource type="Script" uid="uid://cl8tg6vlm42qo" path="res://Scripts/Player/GunSetter.gd" id="2_b1cu7"]
+[ext_resource type="Texture2D" uid="uid://cyucvj3lxoroa" path="res://Images/Explosions/big-explosion.png" id="2_dpfqe"]
+[ext_resource type="Script" uid="uid://d4h0d6b1f68wx" path="res://Scripts/General/DamageAndHealths.gd" id="3_dpfqe"]
+[ext_resource type="PackedScene" uid="uid://b3fml1hdsfhnf" path="res://Scenes/Objects/Player/Veapons/PlasmaGun/PlasmaGunBottom.tscn" id="3_vw7st"]
+[ext_resource type="PackedScene" uid="uid://b3wtlj5i6uk4c" path="res://Scenes/Objects/Player/Veapons/PlasmaGun/PlasmaGunSide.tscn" id="7_rs8og"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3x0xp"]
+radius = 15.0
+height = 194.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs8og"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rik73"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipinx"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpgio"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w6oj"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qaywi"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esr5v"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0avk"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ujj1"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcj8b"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps2mu"]
+atlas = ExtResource("2_dpfqe")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5nbg"]
+atlas = ExtResource("1_bkb83")
+region = Rect2(0, 0, 240, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7genw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs8og")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rik73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipinx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpgio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w6oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qaywi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esr5v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0avk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ujj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcj8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps2mu")
+}],
+"loop": true,
+"name": &"Explosion",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5nbg")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 5.0
+}]
+
+[node name="PlayerDrone1" type="CharacterBody2D" unique_id=159273251]
+collision_mask = 4
+script = ExtResource("1_b1cu7")
+Speed = 200.0
+
+[node name="PlayerBorder" type="CollisionShape2D" parent="." unique_id=2118873879]
+position = Vector2(1, 10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3x0xp")
+
+[node name="CorpusSprite" type="AnimatedSprite2D" parent="." unique_id=498740274]
+sprite_frames = SubResource("SpriteFrames_7genw")
+animation = &"Fly"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1210405003 node_paths=PackedStringArray("_root", "_sprite") groups=["healths_objects"]]
+collision_mask = 2
+script = ExtResource("3_dpfqe")
+_root = NodePath("..")
+_maxDamage = 50.0
+_minDamage = 40.0
+_healths = 20.0
+_maxHealths = 20.0
+_shield = 10.0
+_maxShield = 10.0
+_recoverShield = 1.0
+_sprite = NodePath("../CorpusSprite")
+_animationAliveName = "Fly"
+_animationAliveScale = 0.5
+_animationDeathName = "Explosion"
+_animationDeathScale = 3.0
+
+[node name="PlayerHealthsCollider" type="CollisionShape2D" parent="Area2D" unique_id=221456676]
+position = Vector2(1, 10)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3x0xp")
+
+[node name="Veapons" type="Node2D" parent="." unique_id=225364946 node_paths=PackedStringArray("_points")]
+script = ExtResource("2_b1cu7")
+Weapons = [ExtResource("3_vw7st"), ExtResource("7_rs8og")]
+_points = [NodePath("Bottom"), NodePath("Side")]
+
+[node name="Bottom" type="Node2D" parent="Veapons" unique_id=972540258]
+position = Vector2(31, 28)
+
+[node name="Side" type="Node2D" parent="Veapons" unique_id=1351484965]
+position = Vector2(67, 12)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1145262055]
+current = true

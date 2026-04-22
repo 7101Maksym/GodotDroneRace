@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://blx0d441a67f7"]
+
+[ext_resource type="Script" uid="uid://b4o6krdi7kd2d" path="res://Scripts/General/BulletScript.gd" id="1_0ufam"]
+[ext_resource type="Texture2D" uid="uid://bwb4oqmyakxjw" path="res://Images/Explosions/ImpulseHit.png" id="2_emmae"]
+[ext_resource type="Script" uid="uid://d4h0d6b1f68wx" path="res://Scripts/General/DamageAndHealths.gd" id="2_nv87b"]
+[ext_resource type="Texture2D" uid="uid://dn3thm5fla0qb" path="res://Images/Bullets/charged.png" id="3_nv87b"]
+[ext_resource type="AudioStream" uid="uid://tmtyo2mcqd1u" path="res://Sounds/PlasmaGun1.mp3" id="5_nv87b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yub7u"]
+size = Vector2(46, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_salnx"]
+atlas = ExtResource("2_emmae")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tvkn"]
+atlas = ExtResource("2_emmae")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp1tu"]
+atlas = ExtResource("2_emmae")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwg04"]
+atlas = ExtResource("2_emmae")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5tkx"]
+atlas = ExtResource("2_emmae")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_287ae"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(0, 0, 63, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljojo"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(63, 0, 63, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be1t0"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(126, 0, 63, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvrod"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(189, 0, 63, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8gco"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(252, 0, 63, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o0qb"]
+atlas = ExtResource("3_nv87b")
+region = Rect2(315, 0, 63, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jn4hm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_salnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tvkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp1tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwg04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5tkx")
+}],
+"loop": true,
+"name": &"Explosion",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_287ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljojo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_be1t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvrod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8gco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o0qb")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 20.0
+}]
+
+[node name="PlasmaGunBullet" type="Node2D" unique_id=1027167197]
+script = ExtResource("1_0ufam")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=370965198 node_paths=PackedStringArray("_root", "_sprite") groups=["healths_objects"]]
+collision_mask = 6
+script = ExtResource("2_nv87b")
+_root = NodePath("..")
+_damageble = false
+_isBullet = true
+_maxDamage = 8.0
+_minDamage = 8.0
+_sprite = NodePath("../Bullet")
+_animationAliveName = "Fly"
+_animationAliveScale = 0.5
+_animationDeathName = "Explosion"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1144810236]
+position = Vector2(4, 0)
+shape = SubResource("RectangleShape2D_yub7u")
+
+[node name="Bullet" type="AnimatedSprite2D" parent="." unique_id=584814117]
+sprite_frames = SubResource("SpriteFrames_jn4hm")
+animation = &"Fly"
+frame = 5
+frame_progress = 0.12901157
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1562096939]
+stream = ExtResource("5_nv87b")
+autoplay = true

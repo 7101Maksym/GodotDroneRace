@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b3wtlj5i6uk4c"]
+
+[ext_resource type="Script" uid="uid://c7fbookhyu77h" path="res://Scripts/General/GunScript.gd" id="1_a865t"]
+[ext_resource type="Texture2D" uid="uid://bwqd2057pl705" path="res://Images/Player/Veapons/PlayerPlasmaGun.png" id="2_6ujd5"]
+[ext_resource type="PackedScene" uid="uid://blx0d441a67f7" path="res://Scenes/Objects/Player/Veapons/PlasmaGun/plasma_gun_bullet.tscn" id="3_7bkcx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80euh"]
+atlas = ExtResource("2_6ujd5")
+region = Rect2(28, 73, 509, 164)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3exxu"]
+atlas = ExtResource("2_6ujd5")
+region = Rect2(590, 196, 254, 49)
+
+[node name="PlasmaGunSide" type="Node2D" unique_id=1804778784 node_paths=PackedStringArray("_reloadTimer")]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_a865t")
+MyImage = SubResource("AtlasTexture_80euh")
+_directionX = 1
+_maxSpeed = 700.0
+_minSpeed = 700.0
+_shellScetter = 1.0
+_bullet = ExtResource("3_7bkcx")
+_bulletsPerShoot = 5
+_bulletDelay = 0.05
+_reloadTime = 2.0
+_reloadTimer = NodePath("Timer")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=35193572]
+texture = SubResource("AtlasTexture_3exxu")
+offset = Vector2(114, 1)
+
+[node name="GeneratingPoint" type="Node2D" parent="." unique_id=517124530]
+position = Vector2(216.66666, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=543998601]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://biix4tgxakoe5"]
+
+[ext_resource type="Script" uid="uid://bduankbf6ba43" path="res://Scripts/UI/joystick.gd" id="1_4ard8"]
+[ext_resource type="PackedScene" uid="uid://bolodsplnqnqu" path="res://addons/virtual_joystick/virtual_joystick.tscn" id="2_hljin"]
+
+[node name="Joystick" type="Control" unique_id=1624907171]
+modulate = Color(1, 1, 1, 0.48235294)
+layout_mode = 3
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_4ard8")
+
+[node name="VirtualJoystick" parent="." unique_id=912784726 instance=ExtResource("2_hljin")]
+layout_mode = 0
+mode = 1
+boundary = 1.15
+deadzone = 0.18
+dynamic_area_right_margin = 0.5
