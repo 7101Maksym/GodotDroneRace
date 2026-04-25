@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 BulletContainer="*uid://2dmnudhholv4"
 NodeGetter="*uid://dqqhmiucp5huh"
-WeaponsSetter="*uid://bd8lagmh1od7k"
+PlayerData="*uid://bd8lagmh1od7k"
 
 [display]
 

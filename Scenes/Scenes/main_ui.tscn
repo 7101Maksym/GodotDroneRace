@@ -34,6 +34,7 @@ grow_vertical = 2
 script = ExtResource("1_t1sx5")
 
 [node name="SetDroneMenu" type="CanvasLayer" parent="." unique_id=608803413]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="SetDroneMenu" unique_id=2076408765]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
@@ -54,6 +55,13 @@ anchor_bottom = 0.688
 offset_top = 0.23999023
 offset_bottom = -0.2000122
 theme_override_constants/separation = 863
+
+[node name="1" parent="SetDroneMenu/HBoxContainer" unique_id=1945077199 node_paths=PackedStringArray("Points") instance=ExtResource("3_4qtac")]
+layout_mode = 2
+Points = {
+"Bottom": NodePath("PD1_UI/Bottom"),
+"Side": NodePath("PD1_UI/Side")
+}
 
 [node name="Panel" type="Panel" parent="SetDroneMenu" unique_id=2118001232]
 anchors_preset = -1
@@ -103,7 +111,6 @@ text = "Change veapons"
 
 [node name="SetVeaponsMenu" type="CanvasLayer" parent="." unique_id=188268209]
 layer = 2
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="SetVeaponsMenu" unique_id=1569379571]
 modulate = Color(0.4725, 0.4725, 0.4725, 1)
@@ -128,8 +135,12 @@ offset_bottom = -0.4000244
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="1" parent="SetVeaponsMenu/Drone" unique_id=1321517630 instance=ExtResource("3_4qtac")]
+[node name="1" parent="SetVeaponsMenu/Drone" unique_id=1321517630 node_paths=PackedStringArray("Points") instance=ExtResource("3_4qtac")]
 layout_mode = 1
+Points = {
+"Bottom": NodePath("PD1_UI/Bottom"),
+"Side": NodePath("PD1_UI/Side")
+}
 
 [node name="GunSetters" type="Control" parent="SetVeaponsMenu" unique_id=135418716]
 layout_mode = 3
@@ -139,7 +150,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GunSetter2" parent="SetVeaponsMenu/GunSetters" unique_id=1252862436 instance=ExtResource("4_hkwcb")]
+[node name="1" parent="SetVeaponsMenu/GunSetters" unique_id=1252862436 instance=ExtResource("4_hkwcb")]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.78800005
@@ -151,8 +162,45 @@ offset_right = 0.39996338
 offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 2
+Index = 1
+
+[node name="2" parent="SetVeaponsMenu/GunSetters" unique_id=409674524 instance=ExtResource("4_hkwcb")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.544
+anchor_bottom = 0.14600001
+offset_left = 979.0
+offset_top = 131.0
+offset_right = -0.20007324
+offset_bottom = -0.40000916
+Index = 2
+
+[node name="3" parent="SetVeaponsMenu/GunSetters" unique_id=1332970053 instance=ExtResource("4_hkwcb")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.319
+anchor_bottom = 0.18400002
+offset_left = 575.0
+offset_top = 166.0
+offset_right = 0.7999878
+offset_bottom = 0.3999939
+Index = 3
+
+[node name="4" parent="SetVeaponsMenu/GunSetters" unique_id=139983246 instance=ExtResource("4_hkwcb")]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.77900004
+anchor_right = 0.57500005
+anchor_bottom = 1.0
+offset_left = 1035.0
+offset_top = -0.10003662
+offset_right = -0.00012207031
+offset_bottom = -199.0
+Index = 4
 
 [node name="PlayerInventory" type="CanvasLayer" parent="." unique_id=878459874]
 layer = 10
 
 [connection signal="pressed" from="SetDroneMenu/ChangeVeapons" to="." method="SetChangeVeapons"]
+
+[editable path="SetDroneMenu/HBoxContainer/1"]

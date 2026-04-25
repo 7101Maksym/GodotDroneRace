@@ -3,26 +3,32 @@
 [ext_resource type="Texture2D" uid="uid://bwqd2057pl705" path="res://Images/Player/Veapons/PlayerPlasmaGun.png" id="1_w0u0o"]
 [ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/GunUITemplate.gd" id="2_uvhos"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w0u0o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
 atlas = ExtResource("1_w0u0o")
 region = Rect2(28, 73, 509, 164)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0u0o"]
+atlas = ExtResource("1_w0u0o")
+region = Rect2(592, 48, 252, 68)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvhos"]
 atlas = ExtResource("1_w0u0o")
-region = Rect2(592, 55, 252, 60)
+region = Rect2(590, 196, 255, 49)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
-atlas = ExtResource("1_w0u0o")
-region = Rect2(590, 196, 254, 48)
-
-[node name="PlasmaGunSide" type="TextureRect" unique_id=1546532639]
-anchors_preset = -1
-offset_right = 252.0
-offset_bottom = 60.0
+[node name="PlasmaGun" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("2_uvhos")
-DefaultTexture = SubResource("AtlasTexture_w0u0o")
+DefaultTexture = SubResource("AtlasTexture_od83j")
 Type = 6
-Bottom = SubResource("AtlasTexture_uvhos")
-SideTexture = SubResource("AtlasTexture_od83j")
-BottomOffset = Vector2(86, 0)
-SideOffset = Vector2(0, 23)
+_scale = 0.6
+Bottom = SubResource("AtlasTexture_w0u0o")
+SideTexture = SubResource("AtlasTexture_uvhos")
+_bottomPoint = Vector2(90, 0)
+_sidePoint = Vector2(10, 33)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 252.00009
+offset_bottom = 68.0

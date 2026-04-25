@@ -1,6 +1,7 @@
 extends Control
 
 @onready var MyButton : Button = $StartImage/Button
+@export var Index : int
 
 func _ready() -> void:
 	visible = false
