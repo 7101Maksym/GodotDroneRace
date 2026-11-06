@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dq7uq6fbni8ny"]
+
+[ext_resource type="Texture2D" uid="uid://dgtlysatkt2kk" path="res://Images/UI/Pointer.png" id="1_4e7ns"]
+
+[node name="LevelPoint" type="Control" unique_id=1411800805]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Button" type="Button" parent="." unique_id=1930998531]
+layout_mode = 1
+offset_right = 73.0
+offset_bottom = 73.0
+icon = ExtResource("1_4e7ns")
+flat = true

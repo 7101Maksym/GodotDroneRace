@@ -20,15 +20,14 @@ config/icon="res://icon.svg"
 BulletContainer="*uid://2dmnudhholv4"
 NodeGetter="*uid://dqqhmiucp5huh"
 PlayerData="*uid://bd8lagmh1od7k"
-
-[display]
-
-window/size/viewport_width=1800
-window/size/viewport_height=900
+GunManager="*uid://coc0bwasmx3wb"
+CardManager="*uid://md46dshej60d"
+LevelManager="*uid://c0i4wbnxfdj0k"
+PlayerInventory="*uid://c3k033wdvvyp3"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/virtual_joystick/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dynamic_minimap/plugin.cfg", "res://addons/virtual_joystick/plugin.cfg")
 
 [global_group]
 
@@ -37,6 +36,10 @@ healths_objects="Objects that can take and cause damage"
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Localisation/WeaponsNamesTranslate.en.translation", "res://Localisation/WeaponsNamesTranslate.ru.translation", "res://Localisation/Menu buttons.en.translation", "res://Localisation/Menu buttons.ru.translation", "res://Localisation/Names.en.translation", "res://Localisation/Names.ru.translation")
 
 [layer_names]
 
@@ -55,3 +58,4 @@ textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.3019608, 0.3019608, 0.3019608, 0)

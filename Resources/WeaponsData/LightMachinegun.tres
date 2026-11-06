@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://ds6wkdpcfy4wt"]
+
+[ext_resource type="Texture2D" uid="uid://qyv2rlwtoefa" path="res://Images/Player/Weapons/LightMachineGun.png" id="1_r0736"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_ydkfb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryopx"]
+atlas = ExtResource("1_r0736")
+region = Rect2(60, 843, 868, 166)
+
+[resource]
+script = ExtResource("1_ydkfb")
+damage = 1
+damagesPerShoot = 1
+reloadTime = 0.2
+name = "LIGHT_MACHINEGUN_NAME"
+icon = SubResource("AtlasTexture_ryopx")
+weight = 2
+cost_in = 2
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

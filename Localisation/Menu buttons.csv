@@ -1,0 +1,12 @@
+keys,ru,en
+UPGRADE,Улучьшить,Upgrade
+CHANGE_VEAPONS,Сменить оружие,Change veapons
+CONFIRM,Подтвердить,Confirm
+DAMAGE_UI_DESCR,"Урон, наносимый одним снарядом или в одну секунду.","Damage dealt by a single projectile or per second."
+RELOAD_UI_DESCR,"Время для полной перезарядки оружия.","Time to fully reload the weapon."
+DELETE,Снять,Take off
+OWERWEIGHT,Вес установленного оборудования превысил допустимый.,The weight of the installed equipment exceeded the permissible limit.
+BACK,Назад,Back
+MAP,Карта,Map
+WORKSHOP,Мастерская,Workshop
+ENCYCLOPEDIA,Энциклопедия,Encyclopedia

@@ -2,11 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ct7n3jwbb6sod" path="res://Scripts/Player/Mover.gd" id="1_b1cu7"]
 [ext_resource type="Texture2D" uid="uid://whj17u3d6nks" path="res://Images/Player/Drones/Player drone 1.png" id="1_bkb83"]
-[ext_resource type="Script" uid="uid://cl8tg6vlm42qo" path="res://Scripts/Player/GunSetter.gd" id="2_b1cu7"]
 [ext_resource type="Texture2D" uid="uid://cyucvj3lxoroa" path="res://Images/Explosions/big-explosion.png" id="2_dpfqe"]
 [ext_resource type="Script" uid="uid://d4h0d6b1f68wx" path="res://Scripts/General/DamageAndHealths.gd" id="3_dpfqe"]
-[ext_resource type="PackedScene" uid="uid://b3fml1hdsfhnf" path="res://Scenes/Objects/Player/Veapons/PlasmaGun/PlasmaGunBottom.tscn" id="3_vw7st"]
-[ext_resource type="PackedScene" uid="uid://b3wtlj5i6uk4c" path="res://Scenes/Objects/Player/Veapons/PlasmaGun/PlasmaGunSide.tscn" id="7_rs8og"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3x0xp"]
 radius = 15.0
@@ -145,10 +142,7 @@ position = Vector2(1, 10)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3x0xp")
 
-[node name="Veapons" type="Node2D" parent="." unique_id=225364946 node_paths=PackedStringArray("_points")]
-script = ExtResource("2_b1cu7")
-Weapons = [ExtResource("3_vw7st"), ExtResource("7_rs8og")]
-_points = [NodePath("Bottom"), NodePath("Side")]
+[node name="Veapons" type="Node2D" parent="." unique_id=225364946]
 
 [node name="Bottom" type="Node2D" parent="Veapons" unique_id=972540258]
 position = Vector2(31, 28)

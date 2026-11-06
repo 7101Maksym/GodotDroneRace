@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://bg4qqm4gw0b80"]
+
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_ca0vs"]
+[ext_resource type="Texture2D" uid="uid://bef3mmo1biorn" path="res://Images/Player/Weapons/SniperRifle.png" id="1_nau5c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bomco"]
+atlas = ExtResource("1_nau5c")
+region = Rect2(100, 604, 1171, 147)
+
+[resource]
+script = ExtResource("1_ca0vs")
+damage = 20
+damagesPerShoot = 1
+reloadTime = 7.0
+name = "SNIPER_RIFLE_NAME"
+icon = SubResource("AtlasTexture_bomco")
+weight = 12
+cost_in = 0
+cost = 500
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

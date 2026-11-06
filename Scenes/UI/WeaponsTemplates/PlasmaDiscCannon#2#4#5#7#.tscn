@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://df73arvggx70q"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_60ayi"]
+[ext_resource type="Texture2D" uid="uid://dklpm8mjeipan" path="res://Images/Player/Weapons/PlasmaDiskCanon.png" id="2_w532o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn12"]
+atlas = ExtResource("2_w532o")
+region = Rect2(50, 23, 362, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl0j"]
+atlas = ExtResource("2_w532o")
+region = Rect2(50, 156, 362, 109)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_w532o")
+region = Rect2(33, 290, 379, 104)
+
+[node name="PlasmaDiscCannon" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_60ayi")
+Type = 7
+_scale = 0.5
+Top = SubResource("AtlasTexture_otn12")
+Bottom = SubResource("AtlasTexture_1jl0j")
+SideTexture = SubResource("AtlasTexture_od83j")
+_bottomPoint = Vector2(153, 1)
+_sidePoint = Vector2(1, 51)
+_topPoint = Vector2(150, 117)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+pivot_offset = Vector2(1, 51)
+texture = SubResource("AtlasTexture_od83j")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

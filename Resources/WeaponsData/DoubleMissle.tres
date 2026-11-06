@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://dp7amafslueq8"]
+
+[ext_resource type="Texture2D" uid="uid://8crfmo0niktn" path="res://Images/Player/Weapons/DoubleMissle.png" id="1_ynycd"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="2_xq3lk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynycd"]
+atlas = ExtResource("1_ynycd")
+region = Rect2(1, 1, 528, 424)
+
+[resource]
+script = ExtResource("2_xq3lk")
+damage = 10
+damagesPerShoot = 2
+reloadTime = 8.0
+name = "DOUBLE_MISSLE_NAME"
+icon = SubResource("AtlasTexture_ynycd")
+weight = 10
+cost_in = 0
+cost = 400
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

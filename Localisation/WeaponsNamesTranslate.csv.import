@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://kainf1i1knf6"
+
+[deps]
+
+files=["res://Localisation/WeaponsNamesTranslate.en.translation", "res://Localisation/WeaponsNamesTranslate.ru.translation"]
+
+source_file="res://Localisation/WeaponsNamesTranslate.csv"
+dest_files=["res://Localisation/WeaponsNamesTranslate.en.translation", "res://Localisation/WeaponsNamesTranslate.ru.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

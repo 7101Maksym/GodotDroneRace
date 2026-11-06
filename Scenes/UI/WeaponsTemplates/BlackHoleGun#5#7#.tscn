@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://ytefapw6wo4f"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_4l8rg"]
+[ext_resource type="Texture2D" uid="uid://cu80wcym0wvsw" path="res://Images/Player/Weapons/BlackHoleGun.png" id="2_4l8rg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlhy6"]
+atlas = ExtResource("2_4l8rg")
+region = Rect2(95, 21, 609, 296)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4sy2"]
+atlas = ExtResource("2_4l8rg")
+region = Rect2(95, 339, 606, 245)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yk0w"]
+atlas = ExtResource("2_4l8rg")
+region = Rect2(69, 612, 634, 192)
+
+[node name="BlackHoleGun" type="Control" unique_id=1753203180]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4l8rg")
+Type = 7
+_scale = 0.4
+Top = SubResource("AtlasTexture_tlhy6")
+Bottom = SubResource("AtlasTexture_p4sy2")
+SideTexture = SubResource("AtlasTexture_3yk0w")
+_bottomPoint = Vector2(250, 1)
+_sidePoint = Vector2(1, 100)
+_topPoint = Vector2(245, 295)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=2036977069]
+layout_mode = 0
+pivot_offset = Vector2(1, 100)
+texture = SubResource("AtlasTexture_3yk0w")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=403296421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

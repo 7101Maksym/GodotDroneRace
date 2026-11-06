@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://btk0ihc52eusf"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_d3cd0"]
+[ext_resource type="Texture2D" uid="uid://di5lpgouof53v" path="res://Images/Player/Weapons/Flamer.png" id="2_5vrkd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ph4x"]
+atlas = ExtResource("2_5vrkd")
+region = Rect2(60, 282, 916, 236)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_358fx"]
+atlas = ExtResource("2_5vrkd")
+region = Rect2(60, 2, 916, 238)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lryxh"]
+atlas = ExtResource("2_5vrkd")
+region = Rect2(2, 538, 974, 196)
+
+[node name="Flamethrower" type="Control" unique_id=1753203180]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d3cd0")
+Type = 7
+_scale = 0.2
+Top = SubResource("AtlasTexture_4ph4x")
+Bottom = SubResource("AtlasTexture_358fx")
+SideTexture = SubResource("AtlasTexture_lryxh")
+_bottomPoint = Vector2(344, 4)
+_sidePoint = Vector2(0, 100)
+_topPoint = Vector2(418, 236)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=2036977069]
+layout_mode = 0
+pivot_offset = Vector2(344, 4)
+texture = SubResource("AtlasTexture_358fx")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=403296421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://80vjcm5oad6e"]
+
+[ext_resource type="Script" uid="uid://cxvtsml7n2rs5" path="res://Scripts/UI/DroneSetWeapons/DroneUITemplate.gd" id="1_48mdf"]
+[ext_resource type="Texture2D" uid="uid://deopkxablpqnf" path="res://Images/Player/Drones/Fighter.png" id="2_48mdf"]
+
+[node name="7" type="Control" unique_id=1945077199 node_paths=PackedStringArray("Points")]
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+script = ExtResource("1_48mdf")
+Points = {
+"Bottom": NodePath("PD_UI/Bottom"),
+"Top1": NodePath("PD_UI/Top1"),
+"Top2": NodePath("PD_UI/Top2")
+}
+nameOfDrone = 7
+scaleOfDrone = 0.5
+
+[node name="PD_UI" type="TextureRect" parent="." unique_id=665562440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_48mdf")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Bottom" type="Control" parent="PD_UI" unique_id=1872686135]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.578
+anchor_top = 0.74700004
+anchor_right = 0.578
+anchor_bottom = 0.74700004
+offset_left = -0.35595703
+offset_top = -0.056030273
+offset_right = -0.35595703
+offset_bottom = -0.056030273
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top2" type="Control" parent="PD_UI" unique_id=332628598]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.44400004
+anchor_top = 0.321
+anchor_right = 0.44400004
+anchor_bottom = 0.321
+offset_left = 0.38372803
+offset_top = -0.008010864
+offset_right = 0.38372803
+offset_bottom = -0.008010864
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top1" type="Control" parent="PD_UI" unique_id=2098660337]
+layout_mode = 1
+anchor_left = 0.27400002
+anchor_top = 0.72800004
+anchor_right = 0.27400002
+anchor_bottom = 0.72800004
+offset_left = 0.44161987
+offset_top = 0.25598145
+offset_right = 0.44161987
+offset_bottom = 0.25598145

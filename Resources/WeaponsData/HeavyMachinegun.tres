@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://cnbtd5p3avexr"]
+
+[ext_resource type="Texture2D" uid="uid://dgjlwnr8e14f5" path="res://Images/Player/Weapons/HeavyDoubleMachineGun.png" id="1_4h0iv"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_k117b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bqaj"]
+atlas = ExtResource("1_4h0iv")
+region = Rect2(78, 415, 357, 87)
+
+[resource]
+script = ExtResource("1_k117b")
+damage = 5
+damagesPerShoot = 2
+reloadTime = 0.5
+name = "HEAVY_MACHINEGUN_NAME"
+icon = SubResource("AtlasTexture_7bqaj")
+weight = 10
+cost_in = 0
+cost = 100
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

@@ -1,28 +1,345 @@
 [gd_scene format=3 uid="uid://kscsqa0klhyp"]
 
-[ext_resource type="Texture2D" uid="uid://d0121xfvjqw32" path="res://Images/UI/WorkshopBackground.png" id="1_qud1w"]
-[ext_resource type="Script" uid="uid://dkv43crdq8yh4" path="res://Scripts/UI/MainUI.gd" id="1_t1sx5"]
-[ext_resource type="Texture2D" uid="uid://borwagidxx04" path="res://Images/UI/Panel.png" id="2_4qtac"]
-[ext_resource type="PackedScene" uid="uid://bqa0hdwrlskla" path="res://Scenes/UI/DronesTemplates/1.tscn" id="3_4qtac"]
-[ext_resource type="PackedScene" uid="uid://riy1nek10n31" path="res://Scenes/UI/gun_setter.tscn" id="4_hkwcb"]
+[ext_resource type="Script" uid="uid://dkv43crdq8yh4" path="res://Scripts/UI/DroneSetWeapons/MainUI.gd" id="1_t1sx5"]
+[ext_resource type="Texture2D" uid="uid://pg6yjo2rkjq2" path="res://Images/UI/Hungar.png" id="2_xn4ng"]
+[ext_resource type="Texture2D" uid="uid://ghea5j8w5stp" path="res://Images/UI/Arrow.png" id="3_sqgk8"]
+[ext_resource type="Script" uid="uid://bchtjcsyh06su" path="res://Scripts/UI/General/FontAutoSizingLabels.gd" id="4_2xrpq"]
 [ext_resource type="Texture2D" uid="uid://co3m2qhu0kela" path="res://Images/UI/OptionButton.png" id="4_q0joe"]
 [ext_resource type="Texture2D" uid="uid://kh47f15wsst3" path="res://Images/UI/OptionButtonPressed.png" id="5_hega2"]
+[ext_resource type="Texture2D" uid="uid://biy4b6vavnyo0" path="res://Images/UI/Icons/1 Icons/Green/Skillicon6_11.png" id="7_33ym7"]
+[ext_resource type="Script" uid="uid://dnpusngl5ssyb" path="res://Scripts/UI/DroneSetWeapons/upgrade_panel.gd" id="7_sj1x6"]
+[ext_resource type="Texture2D" uid="uid://dcwcwcyjqwinj" path="res://Images/UI/Copper Coin.png" id="8_33ym7"]
+[ext_resource type="Script" uid="uid://d3lmbgcf66aoc" path="res://Scripts/UI/General/FontAutoSizingButtons.gd" id="8_hega2"]
+[ext_resource type="Texture2D" uid="uid://bt6ltobbfwsdy" path="res://Images/UI/Mass_sign.png" id="8_q0om2"]
+[ext_resource type="Texture2D" uid="uid://4nqiv610bjts" path="res://Images/UI/Icons/1 Icons/LightYellow/Skillicon2_02.png" id="8_usik3"]
+[ext_resource type="Texture2D" uid="uid://cugv4iw06or50" path="res://Images/UI/AtlasResources/Gem.tres" id="9_dd74l"]
+[ext_resource type="Texture2D" uid="uid://br46pc6xd77c5" path="res://Images/UI/Button.png" id="9_sj1x6"]
+[ext_resource type="Script" uid="uid://bvcm6ggykx88r" path="res://Scripts/UI/DroneSetWeapons/buy_panel.gd" id="9_sp664"]
+[ext_resource type="Texture2D" uid="uid://co72ja7o7uup3" path="res://Images/UI/UI.png" id="9_usik3"]
+[ext_resource type="Texture2D" uid="uid://c14copysu6sm3" path="res://Images/UI/Lock.png" id="10_mgn5v"]
+[ext_resource type="Texture2D" uid="uid://n2amd6na56ac" path="res://Images/UI/OptionButtonMirrored.png" id="11_ygmar"]
+[ext_resource type="Script" uid="uid://biyd5bf8s4fs4" path="res://Scripts/UI/DroneSetWeapons/set_veapons_menu.gd" id="12_sj1x6"]
+[ext_resource type="Script" uid="uid://o1rhn4odpcul" path="res://Scripts/UI/DroneSetWeapons/veapon_info.gd" id="14_sj1x6"]
+[ext_resource type="Texture2D" uid="uid://3vfc16pkp320" path="res://Images/Player/Weapons/PlayerPlasmaGun.png" id="15_s8405"]
+[ext_resource type="Texture2D" uid="uid://bb6mh2jy8tw5k" path="res://Images/UI/Icons/1 Icons/Blue/Skillicon13_25.png" id="15_wm685"]
+[ext_resource type="Texture2D" uid="uid://cw8k3umg5edd1" path="res://Images/UI/Icons/1 Icons/Red/Skillicon11_23.png" id="16_ls3hd"]
+[ext_resource type="Script" uid="uid://cyamvybw8q7x3" path="res://Scripts/UI/DroneSetWeapons/button_descr.gd" id="17_ls3hd"]
+[ext_resource type="Texture2D" uid="uid://nf7e4paj1r72" path="res://Images/UI/Icons/1 Icons/LightBlue/Skillicon9_17.png" id="17_wm685"]
+[ext_resource type="Texture2D" uid="uid://cmgorv734mrvc" path="res://Images/UI/OptionButtonPressedMirrored.png" id="21_pqgse"]
+[ext_resource type="Texture2D" uid="uid://c6gx10aubce0i" path="res://Images/UI/WeightPanel.png" id="23_ylnec"]
+[ext_resource type="Script" uid="uid://x0r62rtl4cw7" path="res://Scripts/UI/DroneSetWeapons/weight_panel.gd" id="24_r7k1i"]
+[ext_resource type="Script" uid="uid://cjvtk1eisy50q" path="res://Scripts/UI/MapUI/map.gd" id="29_ainm0"]
+[ext_resource type="Texture2D" uid="uid://c7sept6dkifdc" path="res://Images/UI/MapDevice.png" id="29_xow17"]
+[ext_resource type="Script" uid="uid://cws4qtu3dlonf" path="res://Scripts/UI/StartUI/start_ui.gd" id="30_bbc3i"]
+[ext_resource type="Texture2D" uid="uid://b3emrrobvs04u" path="res://Images/UI/MainUI background.png" id="30_m3gl5"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hkwcb"]
-texture = ExtResource("2_4qtac")
-texture_margin_left = 50.0
-texture_margin_top = 50.0
-texture_margin_right = 50.0
-texture_margin_bottom = 50.0
-modulate_color = Color(1, 1, 1, 0.80784315)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_33ym7"]
+load_path = "res://.godot/imported/UI.png-a946a41fb6a4afb10b0faa231e03d004.ctex"
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1bmn"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_usik3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm685"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 2, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pleb"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 602, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls3hd"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(9, 285, 792, 286)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0nkro"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 602, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sj1x6"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 2, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usik3"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 602, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8405"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(9, 285, 792, 286)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33ym7"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 602, 768, 252)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqgse"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
 texture = ExtResource("4_q0joe")
 texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q0om2"]
+texture = ExtResource("5_hega2")
+texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylnec"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("4_q0joe")
+texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xow17"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("4_q0joe")
+texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
+modulate_color = Color(0.41981313, 0.41981313, 0.4198131, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1bmn"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("4_q0joe")
+texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sqgk8"]
 texture = ExtResource("5_hega2")
 texture_margin_left = 43.0
+texture_margin_top = 44.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="Animation" id="Animation_sj1x6"]
+resource_name = "Open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_bottom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-285.88004, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InformContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_s8405"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset_bottom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InformContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1pleb"]
+_data = {
+&"Open": SubResource("Animation_sj1x6"),
+&"RESET": SubResource("Animation_s8405")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylnec"]
+atlas = ExtResource("15_s8405")
+region = Rect2(750, 480, 603, 229)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygmar"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 2, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqgse"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(21, 602, 768, 252)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0om2"]
+atlas = ExtResource("9_sj1x6")
+region = Rect2(9, 285, 792, 286)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r7k1i"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("11_ygmar")
+texture_margin_top = 44.0
+texture_margin_right = 43.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mgn5v"]
+texture = ExtResource("21_pqgse")
+texture_margin_top = 44.0
+texture_margin_right = 43.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sp664"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("11_ygmar")
+texture_margin_top = 44.0
+texture_margin_right = 43.0
+texture_margin_bottom = 44.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dd74l"]
+content_margin_top = 26.0
+content_margin_bottom = 26.0
+texture = ExtResource("11_ygmar")
+texture_margin_top = 44.0
+texture_margin_right = 43.0
+texture_margin_bottom = 44.0
+modulate_color = Color(0.37036446, 0.3703645, 0.37036446, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r7k1i"]
+font_size = 20
+outline_size = 11
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_r7k1i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-263, 51)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_mgn5v"]
+resource_name = "Show"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.9666667, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-263, 136), Vector2(-263, 136), Vector2(-263, 51)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dd74l"]
+_data = {
+&"RESET": SubResource("Animation_r7k1i"),
+&"Show": SubResource("Animation_mgn5v")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbc3i"]
+atlas = ExtResource("30_m3gl5")
+region = Rect2(97, 70, 1029, 428)
 
 [node name="MainUI" type="Control" unique_id=1384379165]
 layout_mode = 3
@@ -36,17 +353,7 @@ script = ExtResource("1_t1sx5")
 [node name="SetDroneMenu" type="CanvasLayer" parent="." unique_id=608803413]
 visible = false
 
-[node name="TextureRect" type="TextureRect" parent="SetDroneMenu" unique_id=2076408765]
-modulate = Color(0.4725, 0.4725, 0.4725, 1)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_qud1w")
-stretch_mode = 6
-
-[node name="HBoxContainer" type="HBoxContainer" parent="SetDroneMenu" unique_id=1247052217]
+[node name="Drones" type="HBoxContainer" parent="SetDroneMenu" unique_id=1247052217]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.397
@@ -56,14 +363,8 @@ offset_top = 0.23999023
 offset_bottom = -0.2000122
 theme_override_constants/separation = 863
 
-[node name="1" parent="SetDroneMenu/HBoxContainer" unique_id=1945077199 node_paths=PackedStringArray("Points") instance=ExtResource("3_4qtac")]
-layout_mode = 2
-Points = {
-"Bottom": NodePath("PD1_UI/Bottom"),
-"Side": NodePath("PD1_UI/Side")
-}
-
-[node name="Panel" type="Panel" parent="SetDroneMenu" unique_id=2118001232]
+[node name="DroneInform" type="NinePatchRect" parent="SetDroneMenu" unique_id=772912747]
+z_index = 2
 anchors_preset = -1
 anchor_left = 0.048
 anchor_top = 0.076000005
@@ -71,136 +372,1052 @@ anchor_right = 0.20300001
 anchor_bottom = 0.734
 offset_left = -0.16000366
 offset_top = -0.08000183
-offset_right = -0.76000977
-offset_bottom = 0.27996826
-theme_override_styles/panel = SubResource("StyleBoxTexture_hkwcb")
+offset_right = 0.14398193
+offset_bottom = 0.36798096
+texture = SubResource("CompressedTexture2D_33ym7")
+region_rect = Rect2(0, 0, 214, 138)
+patch_margin_left = 43
+patch_margin_top = 41
+patch_margin_right = 43
+patch_margin_bottom = 41
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Name" type="Label" parent="SetDroneMenu/DroneInform" unique_id=1741315980]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.063
+anchor_right = 0.87100005
+anchor_bottom = 0.185
+offset_left = -0.030591965
+offset_top = -0.05842018
+offset_right = 0.07344055
+offset_bottom = -0.13191986
+text = "Drone"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+
+[node name="Parametrs" type="Control" parent="SetDroneMenu/DroneInform" unique_id=1021790130]
+layout_mode = 1
+anchor_left = 0.105000004
+anchor_top = 0.27
+anchor_right = 0.90500003
+anchor_bottom = 0.537
+offset_left = 0.08328247
+offset_top = -6.412651
+offset_right = -0.0079193115
+offset_bottom = -0.15611267
+
+[node name="HP" type="TextureRect" parent="SetDroneMenu/DroneInform/Parametrs" unique_id=1986174899]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.273
+anchor_bottom = 0.455
+offset_right = 0.18192291
+offset_bottom = -0.010002136
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_33ym7")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SetDroneMenu/DroneInform/Parametrs/HP" unique_id=1447294348]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0550001
+anchor_top = 0.24900001
+anchor_right = 3.3220003
+anchor_bottom = 0.753
+offset_left = -0.033981323
+offset_top = 0.042028427
+offset_right = -0.030212402
+offset_bottom = 0.036468506
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "oi9"
+clip_text = true
+script = ExtResource("4_2xrpq")
+max_font_size = 19
+
+[node name="Speed" type="TextureRect" parent="SetDroneMenu/DroneInform/Parametrs" unique_id=1278038020]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.377
+anchor_right = 0.273
+anchor_bottom = 0.832
+offset_left = 47.000004
+offset_top = 7.676796
+offset_right = 47.181915
+offset_bottom = 7.6668015
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("8_usik3")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SetDroneMenu/DroneInform/Parametrs/Speed" unique_id=1203851317]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.076000005
+anchor_top = -1.498
+anchor_right = 1.0710001
+anchor_bottom = 0.128
+offset_left = -0.01920271
+offset_top = 88.92624
+offset_right = 43.911987
+offset_bottom = 44.999626
+grow_vertical = 2
+rotation = -1.5707964
+theme_override_font_sizes/font_size = 32
+text = "9ui90u"
+vertical_alignment = 1
+clip_text = true
+script = ExtResource("4_2xrpq")
+max_font_size = 19
+
+[node name="Mass" type="TextureRect" parent="SetDroneMenu/DroneInform/Parametrs" unique_id=675449743]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.832
+anchor_right = 0.238
+anchor_bottom = 1.115
+offset_top = -0.023605347
+offset_right = -0.034000397
+offset_bottom = -0.046066284
+texture = ExtResource("8_q0om2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="SetDroneMenu/DroneInform/Parametrs/Mass" unique_id=1848781326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.205
+anchor_top = 0.053000003
+anchor_right = 2.4870002
+anchor_bottom = 1.105
+offset_left = 0.005001068
+offset_top = -0.014000177
+offset_right = 6.417
+offset_bottom = 4.2179985
+theme_override_font_sizes/font_size = 29
+text = "260"
+script = ExtResource("4_2xrpq")
+max_font_size = 19
+
+[node name="UpgradePanel" type="Control" parent="SetDroneMenu/DroneInform" unique_id=950814603]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_sj1x6")
+
+[node name="Upgrade" type="TextureButton" parent="SetDroneMenu/DroneInform/UpgradePanel" unique_id=780400454]
+material = SubResource("CanvasItemMaterial_usik3")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.674
+anchor_right = 0.572
+anchor_bottom = 0.78400004
+offset_left = -0.030590057
+offset_top = 0.1472168
+offset_right = 0.081726074
+offset_bottom = 0.10284424
+disabled = true
+texture_normal = SubResource("AtlasTexture_wm685")
+texture_pressed = SubResource("AtlasTexture_1pleb")
+texture_hover = SubResource("AtlasTexture_ls3hd")
+texture_disabled = SubResource("AtlasTexture_0nkro")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="SetDroneMenu/DroneInform/UpgradePanel/Upgrade" unique_id=1404166903]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = -7.527931
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "kjfolgkbjlfkjrtyh"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+script = ExtResource("4_2xrpq")
+min_font_size = 1
+
+[node name="UpgradeCost" type="Control" parent="SetDroneMenu/DroneInform/UpgradePanel" unique_id=30456916]
+layout_mode = 1
+anchor_left = 0.089
+anchor_top = 0.81700003
+anchor_right = 0.92200005
+anchor_bottom = 1.028
+offset_left = 2.9451065
+offset_top = 0.11022949
+offset_right = -0.048614502
+offset_bottom = 0.048706055
+
+[node name="UpgradeByGems" type="TextureButton" parent="SetDroneMenu/DroneInform/UpgradePanel/UpgradeCost" unique_id=2063450681]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021000002
+anchor_top = -0.033
+anchor_right = 0.84200007
+anchor_bottom = 0.578
+offset_left = -0.06600022
+offset_top = -0.029999733
+offset_right = -0.012008667
+offset_bottom = -0.020000458
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_sj1x6")
+texture_pressed = SubResource("AtlasTexture_usik3")
+texture_hover = SubResource("AtlasTexture_s8405")
+texture_disabled = SubResource("AtlasTexture_33ym7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Image" type="TextureRect" parent="SetDroneMenu/DroneInform/UpgradePanel/UpgradeCost" unique_id=431741473]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.102000006
+anchor_right = 0.24700001
+anchor_bottom = 0.42000002
+offset_left = -0.020000458
+offset_top = 0.023999214
+offset_right = 0.033996582
+offset_bottom = 0.0399971
+mouse_filter = 2
+texture = ExtResource("8_33ym7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="UpgData" type="Label" parent="SetDroneMenu/DroneInform/UpgradePanel/UpgradeCost" unique_id=1766297649]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.287
+anchor_top = 0.136
+anchor_right = 0.68500006
+anchor_bottom = 0.39800003
+offset_left = -0.085998535
+offset_top = 0.031999588
+offset_right = 0.069992065
+offset_bottom = -0.024002075
+grow_vertical = 2
+text = "5646"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+
+[node name="Level" type="Label" parent="SetDroneMenu/DroneInform/UpgradePanel" unique_id=1292848357]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.60300004
+anchor_top = 0.674
+anchor_right = 0.88400006
+anchor_bottom = 0.78000003
+offset_left = 0.009002686
+offset_top = 0.1472168
+offset_right = 0.0022277832
+offset_bottom = -0.087677
+theme_override_font_sizes/font_size = 19
+text = "30"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+
+[node name="BuyPanel" type="Control" parent="SetDroneMenu/DroneInform" unique_id=1057053527]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_sp664")
+
+[node name="Buy" type="TextureButton" parent="SetDroneMenu/DroneInform/BuyPanel" unique_id=631077194]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.128
+anchor_top = 0.74700004
+anchor_right = 0.87500006
+anchor_bottom = 0.859
+offset_left = -0.030590057
+offset_top = -0.011505127
+offset_right = 0.08547974
+offset_bottom = 0.04019165
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("AtlasTexture_sj1x6")
+texture_pressed = SubResource("AtlasTexture_usik3")
+texture_hover = SubResource("AtlasTexture_s8405")
+texture_disabled = SubResource("AtlasTexture_33ym7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="SetDroneMenu/DroneInform/BuyPanel/Buy" unique_id=1381478219]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105000004
+anchor_top = 0.272
+anchor_right = 0.284
+anchor_bottom = 0.75200003
+offset_left = -0.041387558
+offset_top = -0.0170784
+offset_right = 0.021389008
+offset_bottom = 0.011608124
+texture = ExtResource("9_dd74l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SetDroneMenu/DroneInform/BuyPanel/Buy" unique_id=2042569074]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.344
+anchor_top = 0.25100002
+anchor_right = 0.90500003
+anchor_bottom = 0.75200003
+offset_left = -0.0022583008
+offset_top = -0.012083054
+offset_right = -0.023384094
+offset_bottom = 0.011608124
+text = "100"
+script = ExtResource("4_2xrpq")
+max_font_size = 16
+
+[node name="LeftArrow" type="TextureButton" parent="SetDroneMenu" unique_id=763747137]
+z_index = 2
+anchors_preset = -1
+anchor_left = 0.224
+anchor_top = 0.45400003
+anchor_right = 0.27
+anchor_bottom = 0.55200005
+offset_left = -0.04800415
+offset_top = -0.1920166
+offset_right = -0.040008545
+offset_bottom = 0.30395508
+texture_normal = ExtResource("3_sqgk8")
+stretch_mode = 0
+flip_h = true
+
+[node name="RightArrow" type="TextureButton" parent="SetDroneMenu" unique_id=1639951587]
+z_index = 2
+anchors_preset = -1
+anchor_left = 0.744
+anchor_top = 0.44900003
+anchor_right = 0.79
+anchor_bottom = 0.54800004
+offset_left = -0.088012695
+offset_top = 0.047973633
+offset_right = -0.08001709
+offset_bottom = -0.104034424
+texture_normal = ExtResource("3_sqgk8")
+stretch_mode = 0
+
+[node name="Lock" type="TextureRect" parent="SetDroneMenu" unique_id=728423471]
+anchors_preset = -1
+anchor_left = 0.39800003
+anchor_top = 0.29500002
+anchor_right = 0.597
+anchor_bottom = 0.651
+offset_left = -0.4960327
+offset_top = -0.16000366
+offset_right = 0.25598145
+offset_bottom = 0.15197754
+texture = ExtResource("10_mgn5v")
+stretch_mode = 5
+
+[node name="ChangeWeapons" type="Button" parent="SetDroneMenu" unique_id=1800037304]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
+anchors_preset = -1
+anchor_left = 0.73
+anchor_top = 0.63000005
+anchor_right = 1.0
+anchor_bottom = 0.77500004
+offset_left = 0.039978027
+offset_top = -0.24002075
+offset_bottom = -0.2000122
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_pqgse")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q0om2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ylnec")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xow17")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "CHANGE_VEAPONS"
 
 [node name="ConfirmButton" type="Button" parent="SetDroneMenu" unique_id=614748264]
 modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
 anchors_preset = -1
 anchor_left = 0.83100003
 anchor_top = 0.81600004
 anchor_right = 1.0
-anchor_bottom = 0.934
-offset_left = 0.19995117
-offset_top = 0.5999756
-offset_bottom = 0.39996338
+anchor_bottom = 0.9620001
+offset_left = -0.4000244
+offset_top = 0.23199463
+offset_bottom = 0.039916992
 theme_override_colors/font_color = Color(1.5720325, 1.5720325, 1.5720325, 1)
-theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxTexture_x1bmn")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sqgk8")
 theme_override_styles/hover = SubResource("StyleBoxTexture_x1bmn")
-text = "Confirm"
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 55.0
+text_auto_shrink = "CONFIRM"
 
-[node name="ChangeVeapons" type="Button" parent="SetDroneMenu" unique_id=1800037304]
-modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+[node name="SetWeaponsMenu" type="CanvasLayer" parent="." unique_id=1814873971]
+visible = false
+script = ExtResource("12_sj1x6")
+
+[node name="WeaponsToSet" type="NinePatchRect" parent="SetWeaponsMenu" unique_id=647137858]
 anchors_preset = -1
-anchor_left = 0.83100003
-anchor_top = 0.652
+anchor_left = 0.014
+anchor_top = 0.72700006
+anchor_right = 0.989
+anchor_bottom = 0.97700006
+offset_left = -0.12800026
+offset_top = -0.09603882
+offset_right = -0.32800293
+offset_bottom = -0.0960083
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_usik3")
+region_rect = Rect2(0, 0, 214, 138)
+patch_margin_left = 43
+patch_margin_top = 41
+patch_margin_right = 43
+patch_margin_bottom = 41
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SetWeaponsMenu/WeaponsToSet" unique_id=1266773166]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.029000001
+anchor_top = 0.20400001
+anchor_right = 0.97
+anchor_bottom = 0.79600006
+offset_left = 0.43299866
+offset_top = -0.048000336
+offset_right = -0.3100586
+offset_bottom = 0.04798889
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SetWeaponsMenu/WeaponsToSet/ScrollContainer" unique_id=1087026109]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 9
+
+[node name="Drone" type="Control" parent="SetWeaponsMenu" unique_id=377555953]
+layout_mode = 3
+anchor_left = 0.12100001
+anchor_top = 0.13000001
+anchor_right = 0.59800005
+anchor_bottom = 0.573
+offset_left = -0.39201355
+offset_top = -0.2400055
+offset_right = 0.10394287
+offset_bottom = -0.3040161
+
+[node name="WeaponInfo" type="NinePatchRect" parent="SetWeaponsMenu" unique_id=144841517]
+visible = false
+z_index = 2
+anchors_preset = -1
+anchor_left = 0.72
+anchor_top = 0.117000006
+anchor_right = 0.9850001
+anchor_bottom = 0.68500006
+offset_left = -0.44006348
+offset_top = 0.18399811
+offset_right = 0.27990723
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_usik3")
+region_rect = Rect2(0, 0, 214, 138)
+patch_margin_left = 43
+patch_margin_top = 41
+patch_margin_right = 43
+patch_margin_bottom = 41
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("14_sj1x6")
+
+[node name="Line2D" type="Line2D" parent="SetWeaponsMenu/WeaponInfo" unique_id=1427240006]
+modulate = Color(0.33333334, 1, 1, 1)
+z_index = -1
+points = PackedVector2Array(266, -53, 0, 0)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="SetWeaponsMenu/WeaponInfo" unique_id=740787219]
+scale = Vector2(2.49, 2.49)
+texture = ExtResource("15_wm685")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SetWeaponsMenu/WeaponInfo" unique_id=551488060]
+libraries/ = SubResource("AnimationLibrary_1pleb")
+
+[node name="InformContainer" type="Control" parent="SetWeaponsMenu/WeaponInfo" unique_id=1569247590]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 0.77000004
-offset_left = 0.19995117
-offset_top = 0.2000122
-offset_bottom = -6.1035156e-05
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Name" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer" unique_id=1615470936]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11800001
+anchor_top = 0.076000005
+anchor_right = 0.882
+anchor_bottom = 0.19000001
+offset_left = -0.10800171
+offset_top = 0.041114807
+offset_right = 0.10800171
+offset_bottom = 0.10279083
+text = "Gun"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 27
+
+[node name="Icon" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer" unique_id=1980130683]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.23600002
+anchor_right = 0.92200005
+anchor_bottom = 0.42100003
+offset_left = -0.09200096
+offset_top = 0.18030548
+offset_right = -0.13201904
+offset_bottom = 0.12249756
+texture = SubResource("AtlasTexture_ylnec")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Damage" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer" unique_id=1664533442]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.44900003
+anchor_right = 0.23900001
+anchor_bottom = 0.57900006
+offset_left = -0.09200096
+offset_top = -0.17814636
+offset_right = -0.13400269
+offset_bottom = -0.0025634766
+texture = ExtResource("16_ls3hd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Value" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer/Damage" unique_id=252276156]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0830001
+anchor_top = 0.14600001
+anchor_right = 1.667
+anchor_bottom = 0.81200004
+offset_left = 0.01599884
+offset_top = -0.008000374
+offset_right = -0.01600647
+offset_bottom = 0.02399826
+text = "256"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 24
+
+[node name="Button" type="Button" parent="SetWeaponsMenu/WeaponInfo/InformContainer/Damage" unique_id=380592518 node_paths=PackedStringArray("_my_description")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("17_ls3hd")
+_my_description = NodePath("Label")
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer/Damage/Button" unique_id=1905317559]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.3330002
+anchor_top = -1.292
+anchor_right = 0.25
+anchor_bottom = 0.29200003
+offset_left = -0.015991211
+offset_top = 0.016002655
+offset_bottom = -0.016000748
+text = "DAMAGE_UI_DESCR"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer/Damage/Button/Label" unique_id=1151349246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.61960787)
+
+[node name="ReloadSpeed" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer" unique_id=729603830]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.082
+anchor_top = 0.58400005
+anchor_right = 0.23900001
+anchor_bottom = 0.71500003
+offset_left = -0.09200096
+offset_top = 0.15803528
+offset_right = -0.13400269
+offset_bottom = -0.034240723
+texture = ExtResource("17_wm685")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Value" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed" unique_id=484517227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.062
+anchor_top = 0.16700001
+anchor_right = 1.8960001
+anchor_bottom = 0.83300006
+offset_left = 0.02399826
+offset_top = -0.016000748
+offset_right = -0.008010864
+offset_bottom = 0.01599884
+text = "256 s"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 24
+
+[node name="Button" type="Button" parent="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed" unique_id=1014797520 node_paths=PackedStringArray("_my_description")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("17_ls3hd")
+_my_description = NodePath("Label")
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed/Button" unique_id=1469763471]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -3.3330002
+anchor_top = 0.85400003
+anchor_right = 0.25
+anchor_bottom = 2.437
+offset_left = -0.015991211
+offset_top = 0.008003235
+offset_bottom = 0.024002075
+text = "RELOAD_UI_DESCR"
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed/Button/Label" unique_id=1421015730]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.40784314, 0.40784314, 0.40784314, 0.61960787)
+
+[node name="Mass" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/InformContainer" unique_id=1739623224]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.549
+anchor_top = 0.45900002
+anchor_right = 0.66300005
+anchor_bottom = 0.555
+offset_left = 0.0060272217
+offset_top = 0.14305115
+offset_right = 0.12200928
+offset_bottom = -0.17341614
+texture = ExtResource("8_q0om2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeaponInfo/InformContainer/Mass" unique_id=223962536]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.212
+anchor_top = 0.061000004
+anchor_right = 2.72
+anchor_bottom = 0.97
+offset_left = 0.003982544
+offset_top = -0.013001204
+offset_right = 0.010002136
+offset_bottom = -0.010002136
+theme_override_font_sizes/font_size = 15
+text = "15"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 19
+
+[node name="DeleteWeapon" type="TextureButton" parent="SetWeaponsMenu/WeaponInfo" unique_id=917874269]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35300002
+anchor_top = 0.772
+anchor_right = 0.915
+anchor_bottom = 0.93000007
+offset_left = -0.018005371
+offset_top = -0.0033874512
+offset_right = 0.009979248
+offset_bottom = -0.12844849
+texture_normal = SubResource("AtlasTexture_ygmar")
+texture_pressed = SubResource("AtlasTexture_pqgse")
+texture_hover = SubResource("AtlasTexture_q0om2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeaponInfo/DeleteWeapon" unique_id=2075529025]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.670288e-05
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 21
+text_auto_shrink = "DELETE"
+
+[node name="BuyWeapon" type="TextureButton" parent="SetWeaponsMenu/WeaponInfo" unique_id=1987723971]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35300002
+anchor_top = 0.772
+anchor_right = 0.915
+anchor_bottom = 0.93000007
+offset_left = -0.018005371
+offset_top = -0.0033874512
+offset_right = 0.009979248
+offset_bottom = -0.12844849
+texture_normal = SubResource("AtlasTexture_ygmar")
+texture_pressed = SubResource("AtlasTexture_pqgse")
+texture_hover = SubResource("AtlasTexture_q0om2")
+texture_disabled = SubResource("AtlasTexture_pqgse")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeaponInfo/BuyWeapon" unique_id=1960558670]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48800004
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.063964844
+grow_horizontal = 2
+grow_vertical = 2
+text = "10000"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 21
+
+[node name="TextureRect" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/BuyWeapon" unique_id=1943273475]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.14500001
+anchor_top = 0.12100001
+anchor_right = 0.41300002
+anchor_bottom = 0.87900007
+offset_left = 0.05999756
+offset_top = -0.018000603
+offset_right = -0.036003113
+offset_bottom = 0.017997742
+
+[node name="Lock" type="TextureRect" parent="SetWeaponsMenu/WeaponInfo/BuyWeapon" unique_id=932044777]
+modulate = Color(2.3133948, 2.3133948, 2.3133948, 1)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36
+anchor_top = 0.12100001
+anchor_right = 0.64000005
+anchor_bottom = 0.79300004
+offset_left = 0.07999802
+offset_top = -0.018000603
+offset_right = -0.08000946
+offset_bottom = 0.005996704
+texture = ExtResource("10_mgn5v")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Confirm" type="Button" parent="SetWeaponsMenu" unique_id=1093327269]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
+anchors_preset = -1
+anchor_top = 0.54800004
+anchor_right = 0.185
+anchor_bottom = 0.70500004
+offset_left = -1.0
+offset_top = -0.104034424
+offset_right = -0.11999512
+offset_bottom = 0.15997314
 theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxTexture_x1bmn")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_sqgk8")
-theme_override_styles/hover = SubResource("StyleBoxTexture_x1bmn")
-text = "Change veapons"
+theme_override_styles/normal = SubResource("StyleBoxTexture_r7k1i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mgn5v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sp664")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dd74l")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "CONFIRM"
 
-[node name="SetVeaponsMenu" type="CanvasLayer" parent="." unique_id=188268209]
-layer = 2
+[node name="WeightPanel" type="NinePatchRect" parent="SetWeaponsMenu" unique_id=677530517]
+anchors_preset = -1
+anchor_left = 0.33200002
+anchor_top = 0.011000001
+anchor_right = 0.45100003
+anchor_bottom = 0.097
+offset_left = 0.5359802
+offset_top = -0.12800074
+offset_right = -0.552063
+offset_bottom = 0.14399719
+texture = ExtResource("23_ylnec")
+region_rect = Rect2(0, 0, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+script = ExtResource("24_r7k1i")
 
-[node name="TextureRect" type="TextureRect" parent="SetVeaponsMenu" unique_id=1569379571]
-modulate = Color(0.4725, 0.4725, 0.4725, 1)
+[node name="Mass" type="TextureRect" parent="SetWeaponsMenu/WeightPanel" unique_id=1026311982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18400002
+anchor_top = 0.19600001
+anchor_right = 0.42600003
+anchor_bottom = 0.786
+offset_left = -0.024009705
+offset_top = 0.023999214
+offset_right = 0.06398773
+offset_bottom = -0.01599884
+texture = ExtResource("8_q0om2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeightPanel/Mass" unique_id=1136769856]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.212
+anchor_top = 0.061000004
+anchor_right = 2.72
+anchor_bottom = 0.97
+offset_left = 0.003982544
+offset_top = -0.013001204
+offset_right = 0.010002136
+offset_bottom = -0.010002136
+theme_override_font_sizes/font_size = 15
+text = "8/10"
+vertical_alignment = 1
+script = ExtResource("4_2xrpq")
+max_font_size = 19
+
+[node name="Label" type="Label" parent="SetWeaponsMenu/WeightPanel" unique_id=205676948]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.9340001
+anchor_top = 2.4290001
+anchor_right = 4.7650003
+anchor_bottom = 3.482
+offset_left = 0.024017334
+offset_top = -85.024
+offset_right = -0.040039063
+offset_bottom = -84.99155
+theme_override_font_sizes/font_size = 34
+text = "OWERWEIGHT"
+label_settings = SubResource("LabelSettings_r7k1i")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SetWeaponsMenu/WeightPanel" unique_id=100426440]
+libraries/ = SubResource("AnimationLibrary_dd74l")
+
+[node name="WorkshopBackground" type="TextureRect" parent="." unique_id=13673102]
+visible = false
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -188.0
+offset_right = 192.0
+offset_bottom = 188.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_qud1w")
+texture = ExtResource("2_xn4ng")
 stretch_mode = 6
 
-[node name="Drone" type="Control" parent="SetVeaponsMenu" unique_id=1099989497]
-layout_mode = 3
-anchor_left = 0.342
-anchor_top = 0.41200003
-anchor_right = 0.683
-anchor_bottom = 0.75600004
-offset_left = 0.39996338
-offset_top = 0.19998169
-offset_right = -0.4000244
-offset_bottom = -0.4000244
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Map" type="CanvasLayer" parent="." unique_id=343794963]
+script = ExtResource("29_ainm0")
 
-[node name="1" parent="SetVeaponsMenu/Drone" unique_id=1321517630 node_paths=PackedStringArray("Points") instance=ExtResource("3_4qtac")]
-layout_mode = 1
-Points = {
-"Bottom": NodePath("PD1_UI/Bottom"),
-"Side": NodePath("PD1_UI/Side")
-}
-
-[node name="GunSetters" type="Control" parent="SetVeaponsMenu" unique_id=135418716]
-layout_mode = 3
+[node name="ColorRect" type="ColorRect" parent="Map" unique_id=1042617015]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.1184996, 0.20224214, 0.2553693, 1)
 
-[node name="1" parent="SetVeaponsMenu/GunSetters" unique_id=1252862436 instance=ExtResource("4_hkwcb")]
-layout_mode = 1
+[node name="Back" type="Button" parent="Map" unique_id=154006454]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
 anchors_preset = -1
-anchor_top = 0.78800005
-anchor_right = 0.32700002
+anchor_left = 0.049000002
+anchor_top = 0.71000004
+anchor_right = 0.185
+anchor_bottom = 0.86700004
+offset_left = -0.44800186
+offset_top = -0.08001709
+offset_right = -0.11999512
+offset_bottom = 0.18395996
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_r7k1i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mgn5v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sp664")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dd74l")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "BACK"
+
+[node name="MapDevice" type="NinePatchRect" parent="Map" unique_id=259329679]
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 589.0
-offset_top = -0.2000122
-offset_right = 0.39996338
-offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 2
-Index = 1
+texture = ExtResource("29_xow17")
+region_rect = Rect2(0, 0, 722, 554)
+patch_margin_left = 376
+patch_margin_top = 274
+patch_margin_right = 347
+patch_margin_bottom = 281
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
-[node name="2" parent="SetVeaponsMenu/GunSetters" unique_id=409674524 instance=ExtResource("4_hkwcb")]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.544
-anchor_bottom = 0.14600001
-offset_left = 979.0
-offset_top = 131.0
-offset_right = -0.20007324
-offset_bottom = -0.40000916
-Index = 2
+[node name="StartUI" type="CanvasLayer" parent="." unique_id=136568336]
+visible = false
+script = ExtResource("30_bbc3i")
 
-[node name="3" parent="SetVeaponsMenu/GunSetters" unique_id=1332970053 instance=ExtResource("4_hkwcb")]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.319
-anchor_bottom = 0.18400002
-offset_left = 575.0
-offset_top = 166.0
-offset_right = 0.7999878
-offset_bottom = 0.3999939
-Index = 3
-
-[node name="4" parent="SetVeaponsMenu/GunSetters" unique_id=139983246 instance=ExtResource("4_hkwcb")]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.77900004
-anchor_right = 0.57500005
+[node name="TextureRect" type="TextureRect" parent="StartUI" unique_id=90919683]
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1035.0
-offset_top = -0.10003662
-offset_right = -0.00012207031
-offset_bottom = -199.0
-Index = 4
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_bbc3i")
+expand_mode = 1
+stretch_mode = 6
 
-[node name="PlayerInventory" type="CanvasLayer" parent="." unique_id=878459874]
-layer = 10
+[node name="Drone setting" type="Button" parent="StartUI" unique_id=1464511313]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
+anchors_preset = -1
+anchor_top = 0.54800004
+anchor_right = 0.185
+anchor_bottom = 0.70500004
+offset_left = -1.0
+offset_top = -0.104034424
+offset_right = -0.11999512
+offset_bottom = 0.15997314
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_r7k1i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mgn5v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sp664")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dd74l")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "WORKSHOP"
 
-[connection signal="pressed" from="SetDroneMenu/ChangeVeapons" to="." method="SetChangeVeapons"]
+[node name="Data base" type="Button" parent="StartUI" unique_id=1512855951]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
+anchors_preset = -1
+anchor_top = 0.76900005
+anchor_right = 0.185
+anchor_bottom = 0.92600006
+offset_left = -1.0
+offset_top = -0.31204224
+offset_right = -0.11999512
+offset_bottom = -0.048034668
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_r7k1i")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mgn5v")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sp664")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dd74l")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "ENCYCLOPEDIA"
 
-[editable path="SetDroneMenu/HBoxContainer/1"]
+[node name="Map" type="Button" parent="StartUI" unique_id=529832015]
+modulate = Color(0.38431373, 0.48235294, 0.31764707, 1)
+z_index = 2
+anchors_preset = -1
+anchor_left = 0.80300003
+anchor_top = 0.781
+anchor_right = 1.0
+anchor_bottom = 0.92600006
+offset_left = -0.056030273
+offset_top = -0.088012695
+offset_bottom = -0.048034668
+theme_override_colors/font_color = Color(1.3785001, 1.3785001, 1.3785001, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_pqgse")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q0om2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ylnec")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xow17")
+script = ExtResource("8_hega2")
+min_font_size = 5
+safety_margin = 80.0
+text_auto_shrink = "MAP"
+
+[connection signal="DroneUpgrated" from="SetDroneMenu/DroneInform/UpgradePanel" to="." method="SetDroneData"]
+[connection signal="pressed" from="SetDroneMenu/DroneInform/UpgradePanel/Upgrade" to="SetDroneMenu/DroneInform/UpgradePanel" method="_upgradeByCoins"]
+[connection signal="pressed" from="SetDroneMenu/DroneInform/UpgradePanel/UpgradeCost/UpgradeByGems" to="SetDroneMenu/DroneInform/UpgradePanel" method="_upgradeByGems"]
+[connection signal="pressed" from="SetDroneMenu/DroneInform/BuyPanel/Buy" to="SetDroneMenu/DroneInform/BuyPanel" method="_on_buy_pressed"]
+[connection signal="pressed" from="SetDroneMenu/LeftArrow" to="." method="PreviousDrone"]
+[connection signal="pressed" from="SetDroneMenu/RightArrow" to="." method="NextDrone"]
+[connection signal="pressed" from="SetDroneMenu/ChangeWeapons" to="." method="_on_change_weapons_pressed"]
+[connection signal="pressed" from="SetDroneMenu/ConfirmButton" to="." method="_on_confirm_changes_button_pressed"]
+[connection signal="weapon_has_bought" from="SetWeaponsMenu/WeaponInfo" to="SetWeaponsMenu" method="WeaponHasBought"]
+[connection signal="pressed" from="SetWeaponsMenu/WeaponInfo/InformContainer/Damage/Button" to="SetWeaponsMenu/WeaponInfo/InformContainer/Damage/Button" method="_on_pressed"]
+[connection signal="pressed" from="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed/Button" to="SetWeaponsMenu/WeaponInfo/InformContainer/ReloadSpeed/Button" method="_on_pressed"]
+[connection signal="pressed" from="SetWeaponsMenu/WeaponInfo/DeleteWeapon" to="SetWeaponsMenu" method="_on_delete_weapon_pressed"]
+[connection signal="pressed" from="SetWeaponsMenu/WeaponInfo/BuyWeapon" to="SetWeaponsMenu/WeaponInfo" method="_on_buy_weapon_pressed"]
+[connection signal="pressed" from="SetWeaponsMenu/Confirm" to="." method="_on_confirm_weapons_button_pressed"]
+[connection signal="pressed" from="Map/Back" to="Map" method="_on_back_pressed"]
+[connection signal="pressed" from="Map/Back" to="StartUI" method="_on_show"]
+[connection signal="pressed" from="StartUI/Drone setting" to="." method="_on_drone_setting_pressed"]
+[connection signal="pressed" from="StartUI/Drone setting" to="StartUI" method="_on_close_pressed"]
+[connection signal="pressed" from="StartUI/Data base" to="StartUI" method="_on_close_pressed"]
+[connection signal="pressed" from="StartUI/Map" to="Map" method="_on_show"]
+[connection signal="pressed" from="StartUI/Map" to="StartUI" method="_on_close_pressed"]

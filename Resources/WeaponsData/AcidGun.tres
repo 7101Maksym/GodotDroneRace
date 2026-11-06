@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://jntiagd7bjmf"]
+
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_8navj"]
+[ext_resource type="Texture2D" uid="uid://byns6u8id18cf" path="res://Images/Player/Weapons/AcidGun.png" id="1_wj5yx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4fd2"]
+atlas = ExtResource("1_wj5yx")
+region = Rect2(800, 200, 696, 239)
+
+[resource]
+script = ExtResource("1_8navj")
+damage = 10
+damagesPerShoot = 1
+reloadTime = 5.0
+name = "ACID_GUN_NAME"
+icon = SubResource("AtlasTexture_v4fd2")
+weight = 7
+cost_in = 1
+cost = 500
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://m1hftnflx3u7"]
+
+[ext_resource type="Texture2D" uid="uid://8f2wgrtvfpbw" path="res://Images/Player/Weapons/TeslaGun.png" id="1_rqiik"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="2_du3lx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wyef"]
+atlas = ExtResource("1_rqiik")
+region = Rect2(729, 446, 672, 248)
+
+[resource]
+script = ExtResource("2_du3lx")
+damage = 1
+damagesPerShoot = 20
+reloadTime = 10.0
+isContinious = true
+name = "TESLA_GUN_NAME"
+icon = SubResource("AtlasTexture_1wyef")
+weight = 15
+cost_in = 0
+cost = 1000
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

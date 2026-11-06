@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://bitc6snv4x4oe"]
+
+[ext_resource type="Texture2D" uid="uid://ddjnhcklkgiyi" path="res://Images/Player/Weapons/EnergyRifle.png" id="1_swqt1"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_tmfk4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahstw"]
+atlas = ExtResource("1_swqt1")
+region = Rect2(264, 59, 239, 99)
+
+[resource]
+script = ExtResource("1_tmfk4")
+damage = 15
+damagesPerShoot = 3
+reloadTime = 8.0
+name = "ENERGY_RIFLE_NAME"
+icon = SubResource("AtlasTexture_ahstw")
+weight = 17
+cost_in = 0
+cost = 700
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

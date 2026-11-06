@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b04n0i06syy8q"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_6iytt"]
+[ext_resource type="Texture2D" uid="uid://8crfmo0niktn" path="res://Images/Player/Weapons/DoubleMissle.png" id="2_6iytt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn12"]
+atlas = ExtResource("2_6iytt")
+region = Rect2(1, 1, 528, 424)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl0j"]
+atlas = ExtResource("2_6iytt")
+region = Rect2(1, 1, 528, 424)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_6iytt")
+region = Rect2(1, 1, 528, 424)
+
+[node name="DoubleMissle" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6iytt")
+Type = 7
+_scale = 0.15
+Top = SubResource("AtlasTexture_otn12")
+Bottom = SubResource("AtlasTexture_1jl0j")
+SideTexture = SubResource("AtlasTexture_od83j")
+_bottomPoint = Vector2(165, 210)
+_sidePoint = Vector2(165, 210)
+_topPoint = Vector2(165, 210)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+pivot_offset = Vector2(165, 210)
+texture = SubResource("AtlasTexture_otn12")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

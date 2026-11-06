@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dqiltmouf53ij"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_b012a"]
+[ext_resource type="Texture2D" uid="uid://dgjlwnr8e14f5" path="res://Images/Player/Weapons/HeavyDoubleMachineGun.png" id="2_b012a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn12"]
+atlas = ExtResource("2_b012a")
+region = Rect2(34, 17, 432, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl0j"]
+atlas = ExtResource("2_b012a")
+region = Rect2(34, 147, 432, 125)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_b012a")
+region = Rect2(34, 284, 434, 114)
+
+[node name="HeavyMachinegun" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b012a")
+Type = 7
+_scale = 0.35
+Top = SubResource("AtlasTexture_otn12")
+Bottom = SubResource("AtlasTexture_1jl0j")
+SideTexture = SubResource("AtlasTexture_od83j")
+_bottomPoint = Vector2(122, 0)
+_sidePoint = Vector2(0, 57)
+_topPoint = Vector2(100, 112)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+pivot_offset = Vector2(0, 57)
+texture = SubResource("AtlasTexture_od83j")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

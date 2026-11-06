@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DroneDataTemplate" format=3 uid="uid://x1bairfw6w0m"]
+
+[ext_resource type="Script" uid="uid://djlmif4gh50ck" path="res://Resources/Templates/DroneDataTemplate.gd" id="1_krrff"]
+
+[resource]
+script = ExtResource("1_krrff")
+base_healths = 35
+base_speed = 5
+max_weight = 35
+cost_in = "Gems"
+cost = 5000
+metadata/_custom_type_script = "uid://djlmif4gh50ck"

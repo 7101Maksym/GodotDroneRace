@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://b7rvepdu7fawo"]
+
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_mrp26"]
+[ext_resource type="Texture2D" uid="uid://3vfc16pkp320" path="res://Images/Player/Weapons/PlayerPlasmaGun.png" id="1_u1ng5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1ng5"]
+atlas = ExtResource("1_u1ng5")
+region = Rect2(750, 480, 603, 229)
+
+[resource]
+script = ExtResource("1_mrp26")
+damage = 5
+damagesPerShoot = 4
+reloadTime = 3.0
+name = "PLASMA_GUN_NAME"
+icon = SubResource("AtlasTexture_u1ng5")
+weight = 5
+cost_in = 3
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

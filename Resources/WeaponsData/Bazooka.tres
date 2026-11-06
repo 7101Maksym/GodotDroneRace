@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://cs7mqturjofh"]
+
+[ext_resource type="Texture2D" uid="uid://mb4gx7wykk33" path="res://Images/Player/Weapons/Bazooka.png" id="1_yxvyf"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="2_qsgxm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsgxm"]
+atlas = ExtResource("1_yxvyf")
+region = Rect2(750, 414, 649, 213)
+
+[resource]
+script = ExtResource("2_qsgxm")
+damage = 25
+damagesPerShoot = 1
+reloadTime = 6.0
+name = "BAZOOKA"
+icon = SubResource("AtlasTexture_qsgxm")
+weight = 17
+cost_in = 0
+cost = 1000
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

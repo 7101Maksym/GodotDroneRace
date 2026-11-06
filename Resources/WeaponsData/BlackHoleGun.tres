@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://cg8vs358chtpa"]
+
+[ext_resource type="Texture2D" uid="uid://cu80wcym0wvsw" path="res://Images/Player/Weapons/BlackHoleGun.png" id="1_6by40"]
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_20f26"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knhcj"]
+atlas = ExtResource("1_6by40")
+region = Rect2(98, 831, 602, 178)
+
+[resource]
+script = ExtResource("1_20f26")
+damage = 10
+damagesPerShoot = 10
+reloadTime = 15.0
+name = "BLACK_HOLE_GUN_NAME"
+icon = SubResource("AtlasTexture_knhcj")
+weight = 17
+cost_in = 0
+cost = 2000
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

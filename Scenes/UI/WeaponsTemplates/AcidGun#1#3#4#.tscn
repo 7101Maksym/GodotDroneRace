@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c706aip61cfa1"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_hws7j"]
+[ext_resource type="Texture2D" uid="uid://byns6u8id18cf" path="res://Images/Player/Weapons/AcidGun.png" id="2_g4jn6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlhy6"]
+atlas = ExtResource("2_g4jn6")
+region = Rect2(43, 205, 698, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4sy2"]
+atlas = ExtResource("2_g4jn6")
+region = Rect2(805, 568, 691, 264)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yk0w"]
+atlas = ExtResource("2_g4jn6")
+region = Rect2(47, 602, 694, 225)
+
+[node name="AcidGun" type="Control" unique_id=1753203180]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hws7j")
+Type = 7
+_scale = 0.25
+Top = SubResource("AtlasTexture_tlhy6")
+Bottom = SubResource("AtlasTexture_p4sy2")
+SideTexture = SubResource("AtlasTexture_3yk0w")
+_bottomPoint = Vector2(200, 0)
+_sidePoint = Vector2(0, 112)
+_topPoint = Vector2(245, 228)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=2036977069]
+layout_mode = 0
+texture = SubResource("AtlasTexture_tlhy6")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=403296421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

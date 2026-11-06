@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://t1x4wicvrvuq"]
+
+[ext_resource type="Script" uid="uid://cxvtsml7n2rs5" path="res://Scripts/UI/DroneSetWeapons/DroneUITemplate.gd" id="1_oh1hn"]
+[ext_resource type="Texture2D" uid="uid://ct72gvjbfguck" path="res://Images/Player/Drones/Megaton.png" id="2_oh1hn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82hbd"]
+atlas = ExtResource("2_oh1hn")
+region = Rect2(33, 24, 701, 194)
+
+[node name="6" type="Control" unique_id=1945077199 node_paths=PackedStringArray("Points")]
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+script = ExtResource("1_oh1hn")
+Points = {
+"Bottom1": NodePath("PD_UI/Bottom1"),
+"Bottom2": NodePath("PD_UI/Bottom2"),
+"Top": NodePath("PD_UI/Top")
+}
+nameOfDrone = 6
+scaleOfDrone = 0.7
+
+[node name="PD_UI" type="TextureRect" parent="." unique_id=665562440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = SubResource("AtlasTexture_82hbd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Bottom1" type="Control" parent="PD_UI" unique_id=1872686135]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.48800004
+anchor_top = 0.35500002
+anchor_right = 0.48800004
+anchor_bottom = 0.35500002
+offset_left = -0.9022217
+offset_top = -0.040008545
+offset_right = -0.9022217
+offset_bottom = -0.040008545
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bottom2" type="Control" parent="PD_UI" unique_id=332628598]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.67800003
+anchor_top = 0.35000002
+anchor_right = 0.67800003
+anchor_bottom = 0.35000002
+offset_left = -0.78430176
+offset_top = 0.19998169
+offset_right = -0.78430176
+offset_bottom = 0.19998169
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="Control" parent="PD_UI" unique_id=2098660337]
+layout_mode = 1
+anchor_left = 0.81000006
+anchor_top = 0.43400002
+anchor_right = 0.81000006
+anchor_bottom = 0.43400002
+offset_left = 0.13964844
+offset_top = -0.23199463
+offset_right = 0.13964844
+offset_bottom = -0.23199463

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://dk7eulw011m84"]
+
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_6ocy0"]
+[ext_resource type="Texture2D" uid="uid://di5lpgouof53v" path="res://Images/Player/Weapons/Flamer.png" id="1_7a1um"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh65c"]
+atlas = ExtResource("1_7a1um")
+region = Rect2(104, 770, 872, 196)
+
+[resource]
+script = ExtResource("1_6ocy0")
+damage = 3
+damagesPerShoot = 5
+reloadTime = 10.0
+isContinious = true
+name = "FLAMER_NAME"
+icon = SubResource("AtlasTexture_jh65c")
+weight = 6
+cost_in = 1
+cost = 2000
+metadata/_custom_type_script = "uid://xjpas0m4o27u"

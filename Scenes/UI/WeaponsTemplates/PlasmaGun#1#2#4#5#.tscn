@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b2pcxdbm0dp3e"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_f2fja"]
+[ext_resource type="Texture2D" uid="uid://3vfc16pkp320" path="res://Images/Player/Weapons/PlayerPlasmaGun.png" id="2_qelj2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45ckt"]
+atlas = ExtResource("2_qelj2")
+region = Rect2(731, 68, 621, 263)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0u0o"]
+atlas = ExtResource("2_qelj2")
+region = Rect2(17, 3, 621, 286)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvhos"]
+atlas = ExtResource("2_qelj2")
+region = Rect2(3, 442, 647, 274)
+
+[node name="PlasmaGun" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f2fja")
+Type = 7
+_scale = 0.2
+Top = SubResource("AtlasTexture_45ckt")
+Bottom = SubResource("AtlasTexture_w0u0o")
+SideTexture = SubResource("AtlasTexture_uvhos")
+_bottomPoint = Vector2(213, 0)
+_sidePoint = Vector2(0, 136)
+_topPoint = Vector2(175, 263)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+texture = SubResource("AtlasTexture_45ckt")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=224209408]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

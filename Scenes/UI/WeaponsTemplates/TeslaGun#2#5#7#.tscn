@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://5nv16178rya1"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_kxnhn"]
+[ext_resource type="Texture2D" uid="uid://8f2wgrtvfpbw" path="res://Images/Player/Weapons/TeslaGun.png" id="2_kxnhn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn12"]
+atlas = ExtResource("2_kxnhn")
+region = Rect2(3, 16, 677, 288)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl0j"]
+atlas = ExtResource("2_kxnhn")
+region = Rect2(729, 3, 673, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_kxnhn")
+region = Rect2(18, 412, 663, 312)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy0js"]
+atlas = ExtResource("2_kxnhn")
+region = Rect2(18, 412, 663, 312)
+
+[node name="TeslaGun" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kxnhn")
+Type = 7
+_scale = 0.35
+Top = SubResource("AtlasTexture_otn12")
+Bottom = SubResource("AtlasTexture_1jl0j")
+SideTexture = SubResource("AtlasTexture_od83j")
+_bottomPoint = Vector2(140, 0)
+_sidePoint = Vector2(0, 156)
+_topPoint = Vector2(200, 288)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+pivot_offset = Vector2(0, 156)
+texture = SubResource("AtlasTexture_wy0js")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

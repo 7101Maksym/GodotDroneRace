@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cqsay54bynmx1"]
+
+[ext_resource type="Script" uid="uid://cxvtsml7n2rs5" path="res://Scripts/UI/DroneSetWeapons/DroneUITemplate.gd" id="1_2qcx1"]
+[ext_resource type="Texture2D" uid="uid://tk85gtdeyhq3" path="res://Images/Player/Drones/Player drone 4.png" id="2_2qcx1"]
+
+[node name="4" type="Control" unique_id=1945077199 node_paths=PackedStringArray("Points")]
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+script = ExtResource("1_2qcx1")
+Points = {
+"Side": NodePath("PD_UI/Side"),
+"Top": NodePath("PD_UI/Top")
+}
+nameOfDrone = 4
+scaleOfDrone = 0.7
+
+[node name="PD_UI" type="TextureRect" parent="." unique_id=665562440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_2qcx1")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Top" type="Control" parent="PD_UI" unique_id=1872686135]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.509
+anchor_top = 0.38900003
+anchor_right = 0.509
+anchor_bottom = 0.38900003
+offset_left = 0.5039673
+offset_top = -0.072021484
+offset_right = 0.5039673
+offset_bottom = -0.072021484
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Side" type="Control" parent="PD_UI" unique_id=707473800]
+z_index = 1
+layout_mode = 1
+anchor_left = 0.572
+anchor_top = 0.59900004
+anchor_right = 0.572
+anchor_bottom = 0.59900004
+offset_left = -0.9680176
+offset_top = -0.15203857
+offset_right = -0.9680176
+offset_bottom = -0.15203857
+grow_horizontal = 2
+grow_vertical = 2

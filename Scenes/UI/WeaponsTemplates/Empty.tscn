@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://0n0b0vtk484s"]
+
+[ext_resource type="Script" uid="uid://e4lnhdmjxm3k" path="res://Scripts/UI/DroneSetWeapons/empty.gd" id="1_d00pc"]
+[ext_resource type="Texture2D" uid="uid://cjtdwd16k1ure" path="res://Images/UI/Icons/1 Icons/GreenLight/Skillicon3_32.png" id="3_nakgl"]
+
+[node name="Empty" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d00pc")
+
+[node name="Image" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("3_nakgl")
+
+[node name="Button" type="Button" parent="Image" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="Image/Button" to="." method="_on_button_pressed"]

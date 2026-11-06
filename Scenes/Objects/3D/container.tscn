@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dl31ro03leka2"]
+
+[ext_resource type="PackedScene" uid="uid://cr24mrm5sco4t" path="res://3DRes/Container/Container.glb" id="1_021yj"]
+
+[node name="Container" unique_id=1951171163 instance=ExtResource("1_021yj")]

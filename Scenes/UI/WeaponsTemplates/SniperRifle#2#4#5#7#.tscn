@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://djpcxl35n3in2"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_bs5g1"]
+[ext_resource type="Texture2D" uid="uid://bef3mmo1biorn" path="res://Images/Player/Weapons/SniperRifle.png" id="2_bs5g1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3i2n"]
+atlas = ExtResource("2_bs5g1")
+region = Rect2(100, 39, 1169, 163)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxhxy"]
+atlas = ExtResource("2_bs5g1")
+region = Rect2(101, 225, 1169, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs5g1"]
+atlas = ExtResource("2_bs5g1")
+region = Rect2(78, 419, 1191, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_bs5g1")
+region = Rect2(78, 419, 1191, 160)
+
+[node name="SniperRifle" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_bs5g1")
+Type = 7
+_scale = 0.4
+Top = SubResource("AtlasTexture_p3i2n")
+Bottom = SubResource("AtlasTexture_cxhxy")
+SideTexture = SubResource("AtlasTexture_bs5g1")
+_bottomPoint = Vector2(160, 0)
+_sidePoint = Vector2(0, 75)
+_topPoint = Vector2(175, 163)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 1169.0
+offset_bottom = 160.0
+pivot_offset = Vector2(0, 75)
+texture = SubResource("AtlasTexture_od83j")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=428679997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

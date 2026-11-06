@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c6y23negc07fp"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_e7uiy"]
+[ext_resource type="Texture2D" uid="uid://mb4gx7wykk33" path="res://Images/Player/Weapons/Bazooka.png" id="2_btbdq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ph4x"]
+atlas = ExtResource("2_btbdq")
+region = Rect2(17, 66, 654, 257)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_358fx"]
+atlas = ExtResource("2_btbdq")
+region = Rect2(751, 2, 649, 277)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lryxh"]
+atlas = ExtResource("2_btbdq")
+region = Rect2(2, 399, 669, 227)
+
+[node name="Bazooka" type="Control" unique_id=1753203180]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e7uiy")
+Type = 7
+_scale = 0.3
+Top = SubResource("AtlasTexture_4ph4x")
+Bottom = SubResource("AtlasTexture_358fx")
+SideTexture = SubResource("AtlasTexture_lryxh")
+_bottomPoint = Vector2(220, 0)
+_sidePoint = Vector2(0, 111)
+_topPoint = Vector2(277, 257)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=2036977069]
+layout_mode = 0
+pivot_offset = Vector2(277, 257)
+texture = SubResource("AtlasTexture_4ph4x")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=403296421]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

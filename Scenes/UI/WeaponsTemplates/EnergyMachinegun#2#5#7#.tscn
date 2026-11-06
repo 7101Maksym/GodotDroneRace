@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://covypqnht50sl"]
+
+[ext_resource type="Script" uid="uid://cpcrm3rbjwv5c" path="res://Scripts/UI/DroneSetWeapons/GunUITemplate.gd" id="1_hej3p"]
+[ext_resource type="Texture2D" uid="uid://cvrkpamp5k6sr" path="res://Images/Player/Weapons/EnergyMachineGun.png" id="2_qu3sy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otn12"]
+atlas = ExtResource("2_qu3sy")
+region = Rect2(33, 32, 445, 114)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jl0j"]
+atlas = ExtResource("2_qu3sy")
+region = Rect2(33, 158, 445, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od83j"]
+atlas = ExtResource("2_qu3sy")
+region = Rect2(32, 295, 446, 86)
+
+[node name="EnergyMachinegun" type="Control" unique_id=2005180454]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hej3p")
+Type = 7
+_scale = 0.4
+Top = SubResource("AtlasTexture_otn12")
+Bottom = SubResource("AtlasTexture_1jl0j")
+SideTexture = SubResource("AtlasTexture_od83j")
+_bottomPoint = Vector2(100, 1)
+_sidePoint = Vector2(1, 42)
+_topPoint = Vector2(100, 113)
+
+[node name="GunImage" type="TextureRect" parent="." unique_id=1546532639]
+layout_mode = 1
+anchors_preset = -1
+pivot_offset = Vector2(1, 42)
+texture = SubResource("AtlasTexture_od83j")
+
+[node name="Button" type="Button" parent="GunImage" unique_id=1442125825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true

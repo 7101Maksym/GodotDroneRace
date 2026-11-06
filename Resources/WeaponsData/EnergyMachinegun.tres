@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="VeaponData" format=3 uid="uid://bh4c40wt5qq28"]
+
+[ext_resource type="Script" uid="uid://xjpas0m4o27u" path="res://Resources/Templates/VeaponData.gd" id="1_3itfs"]
+[ext_resource type="Texture2D" uid="uid://cvrkpamp5k6sr" path="res://Images/Player/Weapons/EnergyMachineGun.png" id="1_exn0p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5gso"]
+atlas = ExtResource("1_exn0p")
+region = Rect2(33, 407, 442, 83)
+
+[resource]
+script = ExtResource("1_3itfs")
+damage = 2
+damagesPerShoot = 1
+reloadTime = 0.2
+name = "ENERGY_MACHINEGUN_NAME"
+icon = SubResource("AtlasTexture_d5gso")
+weight = 4
+cost_in = 1
+cost = 700
+metadata/_custom_type_script = "uid://xjpas0m4o27u"
